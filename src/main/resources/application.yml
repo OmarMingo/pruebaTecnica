@@ -1,0 +1,30 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: pruebaTecnica
+  datasource:
+    tomcat:
+      url: jdbc:postgresql://localhost:5432/pruebaTecnica
+      username: user
+      password: user
+      driver-class-name: org.postgresql.Driver
+      test-on-borrow: true
+      validation-query: SELECT 1
+      validation-interval: 10000
+      time-between-eviction-runs-millis: 10000
+      test-while-idle: true
+      remove-abandoned: true
+      remove-abandoned-timeout: 30
+      initial-size: 1
+      max-active: 3
+      max-idle: 2
+      min-idle: 1
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
+file:
+  upload-dir: ./documents
