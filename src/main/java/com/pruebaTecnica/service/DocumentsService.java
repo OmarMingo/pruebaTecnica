@@ -14,9 +14,7 @@ public interface DocumentsService {
 	void save(Document documento);
 	
 	void updateFile(DocumentModel documentoModel);
-	
-	String storeFile(MultipartFile files, String nombres);
-	
+		
 	String upload(List<MultipartFile> files, List<String> nombres);
 	
 	void deleteFile(Long id);

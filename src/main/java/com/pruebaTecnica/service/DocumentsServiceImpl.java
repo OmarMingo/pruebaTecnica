@@ -50,8 +50,7 @@ public class DocumentsServiceImpl implements DocumentsService{
 		documentsRepository.save(doc);		
 	}
 
-	@Override
-	public String storeFile(MultipartFile documento, String nombre) {
+	private String storeFile(MultipartFile documento, String nombre) {
 		String fileName = StringUtils.cleanPath(documento.getOriginalFilename());
         String extension = fileName.substring(fileName.lastIndexOf("."));
         String newName = nombre + extension;
